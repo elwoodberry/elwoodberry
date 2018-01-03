@@ -1,0 +1,47 @@
+#splash {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #104758;
+
+  h1 {
+    color: #FFF;
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+    font-size: 150px;
+    position: absolute;
+    left: 24%;
+    top: 25%;
+  }
+}
+
+#brand {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+
+  .brand-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #f3f3f3;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  .brand-letter {
+    font-size: 144px;
+    color: #FFF;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+  }
+  .brand-number {
+    font-size: 44px;
+    color: #FFF;
+    position: absolute;
+    left: 27%;
+    top: 23%;
+  }
+}

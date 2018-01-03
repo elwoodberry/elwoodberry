@@ -1,0 +1,19 @@
+
+.widget#widget-id
+  header
+    h4
+      i(class="fa fa-hashtag" aria-hidden="true")
+      span Hex Swatch
+
+  .widget-body
+
+    - clrs = ['#703129', '#F2ABA2', '#704F4B', '#F06959', '#BD5346', '#A37E7A', '#FFDEDB', '#99A39D', '#F09B94', '#A7F0C7', '#F5F5F5', '#CCCCCC', '#DDDDDD', '#999999', '#666666','#000000' ]
+
+    .container
+      .row
+
+        each clr in clrs
+          .col-sm-3.col-md-3(style='background-color:'+clr)
+
+    footer
+      h5 footer
