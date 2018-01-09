@@ -1,0 +1,13 @@
+.canvas-header {
+  @include header-default;
+
+  > h4 {
+    left: 0;
+    position: relative;
+    @include transition-default;
+    @include transition-duration-400;
+  }
+  > h4.expanded {
+    left: -500px;
+  }
+}

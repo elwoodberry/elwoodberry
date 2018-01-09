@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 // ROUTES
 var index = require('./routes/index');
+var dashboard = require('./routes/dashboard');
 
 // EXPRESS
 var app = express();
@@ -29,6 +30,7 @@ app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
 
 // ROUTES
 app.use('/', index);
+app.use('/', dashboard); 
 
 // ERRORS
 // 404

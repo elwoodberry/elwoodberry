@@ -1,15 +1,15 @@
 @mixin header-default {
-  background-color: #F2ABA2;
-  border-bottom: 1px solid #704F4B;
-  color: #704F4B;
+  background-color: #e5f3ea;
+  border-bottom: 1px solid #d0d0d0;
+  color: #154f7b;
   display: flex;
   flex-direction: row;
   height: 50px;
   padding-left: 65px;
   padding-top: 10px;
-  position: relative;
+  position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 @mixin animation-default($name, $duration, $timing, $delay, $iteration, $direction, $fill, $state){

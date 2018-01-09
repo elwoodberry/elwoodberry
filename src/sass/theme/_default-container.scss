@@ -1,0 +1,15 @@
+#default-container {
+  margin-left: 50px;
+  overflow: hidden;
+  @include transition-default;
+  @include transition-duration-400;
+
+  .container {
+    padding-top: 50px;
+  }
+
+  &.collapse-area {
+    margin-left: 350px !important;
+  }
+
+}

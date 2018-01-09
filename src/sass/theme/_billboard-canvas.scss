@@ -1,0 +1,42 @@
+#billboard-canvas {
+  background-color: transparent;
+  height: 400px;
+  position: relative;
+  margin-bottom: 25px;
+
+  .title-area {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    width: 50%;
+
+    h2, p {
+      position: relative;
+      z-index: 1;
+    }
+    .shape-one {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.75);
+      width: 471px;
+      height: 1539px;
+      top: -394px;
+      /* transform: rotateX(30deg); */
+      transform: rotate(25deg);
+      z-index: 0;
+      left: -120px;
+    }
+  }
+
+
+  .bckgrnd {
+    background-image: url(../img/billboard-bckgrnd.jpg);
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+    background-color: aliceblue;
+    top: 0;
+    opacity: .85;
+    background-position: center;
+    background-size: cover;
+  }
+}

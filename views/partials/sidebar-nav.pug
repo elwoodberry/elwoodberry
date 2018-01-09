@@ -1,10 +1,30 @@
-.elwood-sidebar
+.sidebar
 
   // HAMBURGER MENU ICON
-  .hamburger
-    i(class="material-icons") menu
+  #sidebar-hamburger.hamburger
+    i(class="fa fa-bars" aria-hidden="true")
 
   // SIDEBAR CONTAINER
   .sidebar-container
     header
       h4 #{title}
+
+    ul(id='portfolio-menu')
+
+      li
+        a(href="/portfolio/prototypes")
+          span Prototypes
+        span(class="menu-icon")
+          i(class="fa fa-rocket" aria-hidden="true")
+
+      li
+        a(href="/portfolio/graphic-design")
+          span Graphic Design
+        span(class="menu-icon")
+          i(class="fa fa-picture-o" aria-hidden="true")
+
+      li
+        a(href="/portfolio/layouts")
+          span Layouts
+        span(class="menu-icon")
+          i(class="fa fa-file-code-o" aria-hidden="true")

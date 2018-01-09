@@ -1,47 +1,255 @@
 #splash {
-  position: absolute;
   height: 100%;
+  overflow: hidden;
+  position: absolute;
   width: 100%;
-  background-color: #104758;
 
-  h1 {
-    color: #FFF;
-    font-family: 'Libre Barcode 39 Extended Text', cursive;
-    font-size: 150px;
+  #splash-container {
+    background-color: transparent;
+    display: flex;
+    height: 300px;
     position: absolute;
-    left: 24%;
-    top: 25%;
+    width: 580px;
+    z-index: 1;
+    @include transition-default;
+    @include transition-duration-400;
+
+    .billboard-container {
+      background-color: transparent;
+      flex: 1;
+      height: 250px;
+      max-width: 380px;
+      min-width: 320px;
+      position: relative;
+
+      .billboard {
+        background-color: transparent;
+        height: 250px;
+        left: 0px;
+        max-width: 380px;
+        min-width: 320px;
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        transform: translateY(400px);
+        @include transition-default;
+        @include transition-duration-400;
+
+        span {
+          color: #A3FF62;
+          left: 5px;
+          opacity: 0;
+          position: absolute;
+          text-transform: uppercase;
+          top: -25px;
+          transform: translateX(100px);
+          @include transition-default;
+          @include transition-duration-600;
+          @include transition-delay-600;
+
+          &::before {
+            border-top: 1px solid #CCC;
+            content: '';
+            display: block;
+            left: -190px;
+            opacity: 0;
+            position: absolute;
+            top: 10px;
+            transform: translateX(-100px);
+            width: 175px;
+            @include transition-default;
+            @include transition-duration-1000;
+            @include transition-delay-1000;
+          }
+        }
+
+        img.icon {
+          background-color: transparent;
+          height: 50px;
+          left: -60px;
+          opacity: 0;
+          position: absolute;
+          top: 5px;
+          transform: translateX(70px);
+          width: auto;
+          @include transition-default;
+          @include transition-duration-400;
+          @include transition-delay-600;
+        }
+
+        .title-container {
+          overflow: hidden;
+
+          h2 {
+            @include h2-title;
+            @include transition-default;
+            @include transition-duration-400;
+            @include transition-delay-400;
+          }
+        }
+
+        p.excerpt {
+          background-color: transparent;
+          color: #FFF;
+          opacity: 0;
+          padding: 10px;
+          @include transition-default;
+          @include transition-duration-600;
+        }
+
+        /* ACTIVE BILLBOARD */
+        &.active {
+          opacity: 1;
+          transform: translateY(0px);
+
+          span {
+            opacity: 1;
+            transform: translateX(0px);
+
+            &::before {
+              opacity: 1;
+              transform: translateX(0px);
+            }
+          }
+          img.icon {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+          .title-container {
+            h2 {
+              transform: translateY(0px);
+            }
+          }
+          p.excerpt {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+
+    ul.billboard-menu {
+      color: #CCC;
+      flex: 1;
+      opacity: 0;
+      transform: translateX(-200px);
+      @include ul-default;
+      @include transition-default;
+      @include transition-duration-1000;
+      @include transition-delay-1000;
+
+      li {
+        font-size: 14px;
+
+        i {
+          font-size: 10px;
+          margin-right: 5px;
+        }
+
+        // LI: HOVER
+        &:hover {
+          color: #A3FF62;
+          cursor: pointer;
+        }
+
+        // LI: ACTIVE
+        &.active {
+          color: #FFF;
+        }
+
+      }
+
+      // UL: ACTIVE
+      &.active {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+
+    }
   }
-}
 
-#brand {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  margin: 0 auto;
-
-  .brand-border {
+  .bckgrnd {
+    height: 500px;
     position: absolute;
     width: 100%;
-    height: 100%;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #f3f3f3;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.25);
+    bottom: 0;
+    z-index: 0;
+    @include pattern-01;
+    @include transition-default;
+    @include transition-duration-400;
   }
-  .brand-letter {
-    font-size: 144px;
-    color: #FFF;
+
+  .hamburger {
+    background-color: transparent;
+    height: 50px;
+    left: 15px;
+    opacity: 0;
     position: absolute;
-    left: 0%;
-    top: 0%;
+    text-align: center;
+    top: 15px;
+    transform: translateX(-100px);
+    width: 50px;
+    z-index: 1;
+    @include transition-default;
+    @include transition-duration-400;
+    @include transition-delay-1600;
+
+    &:hover {
+
+    }
+    &.ready {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+
+    i {
+      color: #afff21;
+      font-size: 34px;
+      line-height: 1.5;
+    }
   }
-  .brand-number {
-    font-size: 44px;
-    color: #FFF;
+
+  footer {
     position: absolute;
-    left: 27%;
-    top: 23%;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(98, 146, 177, 0.38);
+    display: flex;
+    font-size: 12px;
+    color: #FFF;
+    padding: 10px;
+    z-index: 10;
+    transform: translateY(100px);
+    opacity: 0;
+    @include transition-default;
+    @include transition-duration-400;
+    @include transition-delay-1600;
+
+    .copyright {
+      flex: 1;
+    }
+    .social {
+      flex: 1;
+
+      ul {
+        display: flex;
+        @include ul-default;
+
+        li {
+          margin-right: 10px;
+
+          a {
+            color: #FFF;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    &.ready {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
   }
 }

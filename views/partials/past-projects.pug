@@ -1,0 +1,14 @@
+#past-projects
+  h2 Past Projects
+
+  div
+
+    .row
+
+      each project in projects
+        .col-3
+          .display-card
+            .img-container
+            h4 #{project.name}
+            p #{project.excerpt}
+            a(href='#') Learn More

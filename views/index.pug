@@ -4,7 +4,39 @@ block content
 
   #splash
 
-    #brand
-      .brand-border
-      .brand-letter e
-      .brand-number 3
+    #splash-container
+
+      .billboard-container
+
+        each billboard in billboards
+          .billboard(id='' + billboard.id)
+            span #{billboard.type}
+            img(class='icon' src='' + billboard.img)
+            .title-container
+              h2 #{billboard.titleOne}
+            .title-container
+              h2 #{billboard.titleTwo}
+            p(class='excerpt') #{billboard.excerpt}
+
+      ul.billboard-menu
+        each billboard in billboards
+          li(id='' + billboard.id)
+            i(class="fa fa-circle" aria-hidden="true")
+            span #{billboard.titleOne} #{billboard.titleTwo}
+
+    .bckgrnd
+
+    a(class="hamburger" href="/dashboard" alt="Portfolio Dashboard")
+      i(class="fa fa-bars" aria-hidden="true")
+
+    footer
+      .copyright &#169; 2018 Elwood S. Berry III, All Rights Reserved. All designs, concepts, prototypes, animations are property of Elwood Berry III.
+
+      .social
+        ul
+          li
+            a(href="https://www.linkedin.com/in/iamelwood/" target="_blank" rel="external")
+              i(class="fa fa-linkedin" aria-hidden="true")
+          li
+            a(href="https://github.com/elwoodberry" target="_blank" rel="external")
+              i(class="fa fa-github-alt" aria-hidden="true")
