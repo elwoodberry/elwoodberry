@@ -3,16 +3,44 @@ let router = express.Router();
 
 // PORTFOLIO DATA
 let portfolio = require('../data/portfolio-data');
-let pastProjects = portfolio.pastProjects();
+let pastProjects = portfolio.setProject('past');
+let designProjects = portfolio.setProject('design');
+let layoutProjects = portfolio.setProject('layout');
+let prototypeProjects = portfolio.setProject('prototype');
 
+// LAYOUTS
 router.get('/layouts', function(req, res, next) {
-  res.render('portfolio/layouts', {
+  res.render('portfolio/grid', {
     title: "Layouts",
     description: "Application Layouts by Elwood Berry -||- Portfolio Application",
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
-    projects: pastProjects
+    projects: layoutProjects
+  });
+});
+
+// DESIGN
+router.get('/designs', function(req, res, next) {
+  res.render('portfolio/grid', {
+    title: "Graphic Design",
+    description: "Graphic Design by Elwood Berry -||- Portfolio Application",
+    robots: "follow",
+    canonical: "http://domain.com",
+    twitterImage: "http://domain.com",
+    projects: designProjects
+  });
+});
+
+// PROTOTYPES
+router.get('/prototypes', function(req, res, next) {
+  res.render('portfolio/grid', {
+    title: "Prototypes",
+    description: "Application Prototypes by Elwood Berry -||- Portfolio Application",
+    robots: "follow",
+    canonical: "http://domain.com",
+    twitterImage: "http://domain.com",
+    projects: prototypeProjects
   });
 });
 
@@ -23,17 +51,17 @@ router.get('/:id', function(req, res){
   const ID = REQ_ID.slice(1, 7);
   let proj = {};
 
-  for(i = 0; i < pastProjects.length; i++) {
-    if(ID == pastProjects[i].id){
+  for(i = 0; i < portfolio.projects.length; i++) {
+    if(ID == portfolio.projects[i].id){
       proj = {
-        id: pastProjects[i].id,
-        name: pastProjects[i].name,
-        excerpt: pastProjects[i].excerpt,
-        description: pastProjects[i].description,
-        img: pastProjects[i].img,
-        imgurl: pastProjects[i].imgurl,
-        technologies: pastProjects[i].technologies,
-        otherimgs: pastProjects[i].otherimgs
+        id: portfolio.projects[i].id,
+        name: portfolio.projects[i].name,
+        excerpt: portfolio.projects[i].excerpt,
+        description: portfolio.projects[i].description,
+        img: portfolio.projects[i].img,
+        imgurl: portfolio.projects[i].imgurl,
+        technologies: portfolio.projects[i].technologies,
+        otherimgs: portfolio.projects[i].otherimgs
       }
     }
   }

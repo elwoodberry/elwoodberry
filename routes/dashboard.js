@@ -3,7 +3,7 @@ var router = express.Router();
 
 // PORTFOLIO DATA
 let portfolio = require('../data/portfolio-data');
-let pastProjects = portfolio.pastProjects();
+let pastProjects = portfolio.setProject('past');
 
 router.get('/dashboard', function(req, res, next) {
 
@@ -15,7 +15,7 @@ router.get('/dashboard', function(req, res, next) {
     twitterImage: "http://domain.com",
     projects: pastProjects
   });
-  
+
 });
 
 module.exports = router;

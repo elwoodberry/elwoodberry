@@ -1,0 +1,27 @@
+extends ../layouts/app-default.pug
+
+block content
+
+  include ../partials/canvas-header.pug
+
+  //- SMALL HEADER
+  #canvas-billboard-sml
+    .bckgrnd
+    .container
+      .title-area
+        h2(class='title') #{title}
+
+  .container(style='padding-top:0;')
+
+    div
+
+      .row
+
+        each project in projects
+          .col-3
+            .display-card
+              .img-container(style='background-image:url(' + project.img + ')')
+              h4 #{project.name}
+              p #{project.excerpt}
+
+              a(href='/portfolio/:' + project.id ) Learn More

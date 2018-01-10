@@ -11,6 +11,7 @@
   z-index: 1;
 }
 
+// LARGE BILLBOARD
 #canvas-billboard-lrg {
   @include billboard;
   height: 400px;
@@ -46,7 +47,6 @@
     }
   }
 
-
   .bckgrnd {
     background-color: transparent;
     background-image: url(../img/billboard-bckgrnd.jpg);
@@ -80,7 +80,56 @@
   }
 }
 
+// SMALL BILLBOARD
+#canvas-billboard-sml {
+  @include billboard;
+  height: 200px;
 
+  .container {
+    height: inherit;
+    position: relative;
+
+    .title-area {
+      @include area-title;
+      width: 30%;
+
+      h2, p {
+        @include transition-default;
+        @include transition-duration-600;
+        @include transition-delay-600;
+        position: relative;
+        z-index: 1;
+      }
+      h2 {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      p {
+        font-size: 12px;
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      ul#horizontal-menu-icons li {
+        border: none;
+      }
+    }
+  }
+
+  .bckgrnd {
+    background-color: transparent;
+    background-image: url(../img/billboard-bckgrnd.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    opacity: .85;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+}
 
 
 
