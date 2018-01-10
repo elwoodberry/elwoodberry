@@ -9,22 +9,29 @@
     header
       h4 #{title}
 
-    ul(id='portfolio-menu')
+  .menu-icons
+    ul(id='vertical-menu-icons')
 
+      //- DASHBOARD
+      li
+        a(href="/dashboard")
+          i(class="fa fa-th" aria-hidden="true")
+          span Dashboard
+
+      //- PROTOTYPES
       li
         a(href="/portfolio/prototypes")
-          span Prototypes
-        span(class="menu-icon")
           i(class="fa fa-rocket" aria-hidden="true")
+          span Prototypes
 
+      //- GRAPHIC DESIGN
       li
         a(href="/portfolio/graphic-design")
-          span Graphic Design
-        span(class="menu-icon")
           i(class="fa fa-picture-o" aria-hidden="true")
+          span Design
 
+      //- LAYOUTS
       li
         a(href="/portfolio/layouts")
-          span Layouts
-        span(class="menu-icon")
           i(class="fa fa-file-code-o" aria-hidden="true")
+          span Layouts

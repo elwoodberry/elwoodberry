@@ -8,7 +8,8 @@
       each project in projects
         .col-3
           .display-card
-            .img-container
+            .img-container(style='background-image:url(' + project.img + ')')
             h4 #{project.name}
             p #{project.excerpt}
-            a(href='#') Learn More
+
+            a(href='portfolio/:' + project.id ) Learn More

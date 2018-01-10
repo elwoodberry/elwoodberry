@@ -2,12 +2,18 @@
   @include header-default;
 
   > h4 {
-    left: 0;
+    left: 45px;
     position: relative;
     @include transition-default;
     @include transition-duration-400;
   }
   > h4.expanded {
     left: -500px;
+  }
+
+  .external-options {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }

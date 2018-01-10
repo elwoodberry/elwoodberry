@@ -1,0 +1,143 @@
+@mixin ul-menu-icon {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  @include ul-default;
+}
+
+@mixin ul-menu-icon-li {
+  background-color: transparent;
+  flex: 1;
+  position: relative;
+
+  &:hover {
+    background-color: rgba(79, 89, 114, 0.07);
+  }
+}
+
+@mixin ul-menu-icon-anchor {
+  align-items: center;
+  background-color: transparent;
+  color: #4f5972;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+  width: 50px;
+  z-index: 10;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin ul-menu-icon-anchor-i {
+  flex: 1;
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+@mixin ul-menu-icon-anchor-span {
+  background-color: transparent;
+  flex: 1;
+  font-size: 9px;
+  text-align: center;
+  width: 100%;
+}
+
+@mixin ul-menu-icon-li-icon {
+  /* background-color: #598a96; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  border-right: 1px solid rgba(0, 0, 0, 0.17);
+  color: #4d5a71;
+  display: block;
+  font-size: 20px;
+  height: 49px;
+  line-height: 2.5;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 50px;
+}
+
+@mixin ul-menu-icon-li-icon-hover {
+  background-color: rgba(79, 89, 114, 0.4);
+  color: #aaf3b0;
+}
+
+// Horizontal
+ul#horizontal-menu-icons {
+  flex-direction: row;
+  @include ul-menu-icon;
+
+  li {
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    @include ul-menu-icon-li;
+
+    a {
+      @include ul-menu-icon-anchor;
+
+      i {
+        @include ul-menu-icon-anchor-i;
+      }
+
+      span {
+        @include ul-menu-icon-anchor-span;
+      }
+
+      .menu-icon {
+        @include ul-menu-icon-li-icon;
+      }
+    }
+
+    &:hover {
+      a {
+        .menu-icon {
+          @include ul-menu-icon-li-icon-hover;
+        }
+      }
+    }
+
+  }
+}
+
+// Vertical
+ul#vertical-menu-icons {
+  flex-direction: column;
+  @include ul-menu-icon;
+
+  li {
+    border-bottom: 1px solid #f1f1f1;
+    @include ul-menu-icon-li;
+    padding: 5px 0;
+
+    a {
+      @include ul-menu-icon-anchor;
+
+      i {
+        @include ul-menu-icon-anchor-i;
+      }
+
+      span {
+        @include ul-menu-icon-anchor-span;
+      }
+
+      .menu-icon {
+        @include ul-menu-icon-li-icon;
+      }
+    }
+
+    &:hover {
+      a {
+        .menu-icon {
+          @include ul-menu-icon-li-icon-hover;
+        }
+      }
+    }
+
+  }
+}

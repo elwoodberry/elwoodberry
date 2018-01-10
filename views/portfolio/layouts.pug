@@ -1,0 +1,10 @@
+extends ../layouts/app-default.pug
+
+block content
+
+  include ../partials/canvas-header.pug
+
+  .container
+
+    each project in projects
+      a(href='/portfolio/layouts/:' + project.id) #{project.name}

@@ -1,0 +1,57 @@
+extends ../layouts/app-default.pug
+
+block content
+
+  include ../partials/canvas-header.pug
+
+  .container
+
+    //- BREADCRUMBS
+    nav(aria-label="breadcrumb")
+      ol(class="breadcrumb")
+        li(class="breadcrumb-item")
+          a(href="/dashboard") Dashboard
+
+        li(class="breadcrumb-item")
+          a(href="/portfolio/layouts") Layouts
+
+        li(class="breadcrumb-item active" aria-current="page") #{name}
+
+    h2 #{name}
+
+    .portfolio-item-display(style='background-image:url('+ img +')')
+      .thumbnail-container
+
+        a(target='_blank' href='' + imgurl)
+          img(src='' + img)
+
+        span
+          i(class="fa fa-angle-left" aria-hidden="true")
+          small Click To See Larger Image.
+
+
+
+    h3(class="portfolio-item-description") Project Description
+    p #{excerpt}
+    p #{description}
+
+    hr
+
+    //- TECHNOLOGIES & OTHER IMAGES
+    .other-info
+      .technologies
+        h3(class="portfolio-item-description") Technolgies Used
+
+        ul
+          each technology in technologies
+            li=technology
+
+      .other-images
+        h3(class="portfolio-item-description") Other Images
+
+        .container
+          .row
+            each otherimg in otherimgs
+              .col-md-4
+                a(class='other-imgs' target='_blank' href='' + otherimg.url style='background-image:url(' + otherimg.thumb +')')
+                  //img(src='' + otherimg.thumb)

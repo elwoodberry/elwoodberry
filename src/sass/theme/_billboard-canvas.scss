@@ -1,42 +1,143 @@
-#billboard-canvas {
+@mixin billboard {
   background-color: transparent;
-  height: 400px;
   position: relative;
   margin-bottom: 25px;
+  overflow: hidden;
+}
+@mixin area-title {
+  bottom: 20px;
+  position: absolute;
+  width: 50%;
+  z-index: 1;
+}
 
-  .title-area {
-    position: absolute;
-    z-index: 1;
-    bottom: 20px;
-    width: 50%;
+#canvas-billboard-lrg {
+  @include billboard;
+  height: 400px;
 
-    h2, p {
-      position: relative;
-      z-index: 1;
-    }
-    .shape-one {
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.75);
-      width: 471px;
-      height: 1539px;
-      top: -394px;
-      /* transform: rotateX(30deg); */
-      transform: rotate(25deg);
-      z-index: 0;
-      left: -120px;
+  .container {
+    height: inherit;
+    position: relative;
+
+    .title-area {
+      @include area-title;
+      width: 30%;
+
+      h2, p {
+        @include transition-default;
+        @include transition-duration-600;
+        @include transition-delay-600;
+        position: relative;
+        z-index: 1;
+      }
+      h2 {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      p {
+        font-size: 12px;
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      ul#horizontal-menu-icons li {
+        border: none;
+      }
     }
   }
 
 
   .bckgrnd {
+    background-color: transparent;
     background-image: url(../img/billboard-bckgrnd.jpg);
-    position: absolute;
-    height: 100%;
-    z-index: 0;
-    background-color: aliceblue;
-    top: 0;
-    opacity: .85;
     background-position: center;
     background-size: cover;
+    height: 100%;
+    opacity: .85;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
   }
+
+}
+
+// INIT.canvas-billboard-lrg
+.init {
+  #canvas-billboard-lrg {
+    .container {
+      .title-area {
+        h2 {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        p {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+// FLOWER
+@mixin pedal-default {
+  height: 375px;
+  left: -60px;
+  position: absolute;
+  top: 180px;
+  width: 500px;
+  @include transition-default;
+  @include transition-duration-400;
+}
+
+#flower-container {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+  #pedal-alpha {
+    @include pedal-default;
+    background-color: rgba(251, 234, 114, 0.0);
+    transform: rotate(0deg);
+  }
+  #pedal-beta {
+    @include pedal-default;
+    background-color: rgba(253, 253, 189, 0);
+    transform: rotate(0deg);
+  }
+  #pedal-charlie {
+    @include pedal-default;
+    background-color: rgba(207, 230, 139, 0);
+    transform: rotate(0deg);
+  }
+}
+
+// INIT.FLOWER
+.init {
+
+  #flower-container {
+
+    #pedal-alpha {
+      @include pedal-default;
+      background-color: rgba(251, 234, 114, 0.45);
+      transform: rotate(45deg);
+    }
+    #pedal-beta {
+      @include pedal-default;
+      background-color: rgba(253, 253, 189, 0.35);
+      transform: rotate(75deg);
+    }
+    #pedal-charlie {
+      @include pedal-default;
+      background-color: rgba(207, 230, 139, 0.4);
+      transform: rotate(105deg);
+    }
+  }
+
 }

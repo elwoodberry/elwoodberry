@@ -4,6 +4,8 @@ Full canvas widget display on the dashboard
 */
 (function(){
 
+console.log('Billboard Display Script - deprecated 01/09/2018');
+/*
   $(document).ready(function(){
     canvasBackground();
   });
@@ -31,5 +33,5 @@ Full canvas widget display on the dashboard
 
     console.log('LEFT POSITION: ' + posLeft );
   }
-
+*/
 })();

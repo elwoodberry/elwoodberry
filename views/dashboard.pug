@@ -2,11 +2,10 @@ extends ./layouts/app-default.pug
 
 block content
 
-  .canvas-header(style="padding-left: 15px;")
-    h4 #{title}
+  include ./partials/canvas-header.pug
 
-  .container
+  include ./partials/billboard.pug
 
-    include ./partials/billboard.pug
+  .container(style='padding-top:0;')
 
     include ./partials/past-projects.pug
