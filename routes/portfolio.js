@@ -1,12 +1,12 @@
-let express = require('express');
-let router = express.Router();
+var express = require('express');
+var router = express.Router();
 
 // PORTFOLIO DATA
-let portfolio = require('../data/portfolio-data');
-let pastProjects = portfolio.setProject('past');
-let designProjects = portfolio.setProject('design');
-let layoutProjects = portfolio.setProject('layout');
-let prototypeProjects = portfolio.setProject('prototype');
+var portfolio = require('../data/portfolio-data');
+var pastProjects = portfolio.setProject('past');
+var designProjects = portfolio.setProject('design');
+var layoutProjects = portfolio.setProject('layout');
+var prototypeProjects = portfolio.setProject('prototype');
 
 // LAYOUTS
 router.get('/layouts', function(req, res, next) {
@@ -47,9 +47,9 @@ router.get('/prototypes', function(req, res, next) {
 // PORTFOLIO DETAIL ROUTE VIEW
 router.get('/:id', function(req, res){
 
-  const REQ_ID = req.params.id;
-  const ID = REQ_ID.slice(1, 7);
-  let proj = {};
+  var REQ_ID = req.params.id;
+  var ID = REQ_ID.slice(1, 7);
+  var proj = {};
 
   for(i = 0; i < portfolio.projects.length; i++) {
     if(ID == portfolio.projects[i].id){

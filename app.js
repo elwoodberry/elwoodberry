@@ -1,3 +1,5 @@
+"use strict"
+
 // PACKAGES
 var express = require('express');
 var path = require('path');
@@ -32,7 +34,7 @@ app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
 // ROUTES
 app.use('/', index);
 app.use('/', dashboard);
-app.use('/portfolio', portfolio); 
+app.use('/portfolio', portfolio);
 
 // ERRORS
 // 404
@@ -55,6 +57,6 @@ app.use(function(err, req, res, next) {
 
 // PORT
 // Listen On Port 3000
-app.listen(3000, function(){
-  console.log('Port:' + 3000);
+app.listen(80, function(){
+  console.log('Port:' + 80);
 });
