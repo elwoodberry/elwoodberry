@@ -1,4 +1,4 @@
-const projects = [
+var projects = [
   {
     id: '000001',
     name: 'TEMPO v2',
@@ -290,7 +290,7 @@ const projects = [
 ];
 
 function setProject(tag){
-  let projectArray = [];
+  var projectArray = [];
   for(i = 0; i < projects.length; i++) {
     if(projects[i].tags.indexOf(tag) > -1){
       projectArray.push(projects[i]);
