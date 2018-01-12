@@ -1,5 +1,6 @@
 #default-container {
   overflow: hidden;
+  padding-bottom: 50px;
   position: relative;
   @include transition-default;
   @include transition-duration-400;

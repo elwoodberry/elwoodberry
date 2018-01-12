@@ -13,12 +13,11 @@ block content
 
   .container(style='padding-top:0;')
 
-    div
-
+    .grid-block
+      h2 #{title} Projects
       .row
-
         each project in projects
-          .col-3
+          .col-lg-3
             .display-card
               .img-container(style='background-image:url(' + project.img + ')')
               h4 #{project.name}

@@ -1,4 +1,4 @@
-.sidebar {
+@mixin sidebar-default {
   align-items: left;
   background-color: transparent;
   display: flex;
@@ -9,47 +9,118 @@
   top: 0;
   width: 50px;
   z-index: 100;
+}
+
+@mixin hamburger-default {
+  background-color: #4b5b70;
+  color: #a2f2b4;
+  cursor: pointer;
+  font-size: 20px;
+  height: 50px;
+  line-height: 1.25;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  text-align: center;
+  width: 50px;
+  z-index: 1;
+
+  &:hover{
+    background-color: #4b5b70;
+  }
+}
+
+@mixin sidebar-container-default {
+  background-color: rgba(245, 245, 245, 0.9);
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  position: fixed;
+  transform: translateX(-300px);
+  width: 350px;
+  z-index: 0;
+  @include transition-default;
+  @include transition-duration-400;
+}
+
+
+// DEFAULT
+.sidebar {
+  @include sidebar-default;
 
   .hamburger {
-    background-color: #4b5b70;
-    color: #a2f2b4;
-    cursor: pointer;
-    height: 50px;
-    padding: 10px 10px 10px 10px;
-    position: relative;
-    text-align: center;
-    width: 50px;
-    z-index: 1;
-    font-size: 20px;
-    line-height: 1.25;
+    @include hamburger-default;
 
-    &:hover{
-      background-color: #4b5b70;
+    i {
+      display: none;
     }
   }
 
   > .sidebar-container {
-      background-color: rgba(245, 245, 245, 0.9);
-      box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
-      height: 100%;
-      position: fixed;
-      transform: translateX(-300px);
-      width: 350px;
-      z-index: 0;
-      @include transition-default;
-      @include transition-duration-400;
+      @include sidebar-container-default;
 
       header {
         @include header-default;
       }
 
-      .menu-icons {
-        position: absolute;
-        top: 50px;
+      #mbl-options {
+        display: none;
       }
-
   }
   > .sidebar-container.expanded-sidebar {
     transform: translateX(0px);
   }
+
+  .menu-icons {
+    position: absolute;
+    top: 50px;
+  }
+}
+
+
+
+
+/* iPhone 5, 5S, 5C and 5SE */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  .sidebar {
+    @include sidebar-default;
+
+    .hamburger {
+      @include hamburger-default;
+
+      i {
+        display: block;
+      }
+
+    }
+
+    > .sidebar-container {
+        @include sidebar-container-default;
+        transform: translateX(-350px);
+
+        header {
+          @include header-default;
+        }
+
+        #mbl-options {
+          display: block;
+          padding-top: 50px;
+
+          ul {
+            @include ul-default;
+
+            li {
+
+            }
+          }
+        }
+
+    }
+    .menu-icons {
+      display: none;
+    }
+  }
+
+/* [end media] */
 }

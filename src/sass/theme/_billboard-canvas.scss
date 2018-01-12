@@ -1,9 +1,14 @@
+// CANVAS BILLBOARD DISPLAY
+// Two sizes. Large and Small.
+
+// MIXINS
 @mixin billboard {
   background-color: transparent;
   position: relative;
   margin-bottom: 25px;
   overflow: hidden;
 }
+
 @mixin area-title {
   bottom: 20px;
   position: absolute;
@@ -11,7 +16,9 @@
   z-index: 1;
 }
 
+// ------------------------------------
 // LARGE BILLBOARD
+// ------------------------------------
 #canvas-billboard-lrg {
   @include billboard;
   height: 400px;
@@ -80,7 +87,27 @@
   }
 }
 
+/* iPhone 5, 5S, 5C and 5SE */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #canvas-billboard-lrg {
+    .container {
+      .title-area {
+        left: 0;
+        padding: 0 15px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+// ------------------------------------
 // SMALL BILLBOARD
+// ------------------------------------
 #canvas-billboard-sml {
   @include billboard;
   height: 200px;

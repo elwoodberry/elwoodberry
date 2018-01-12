@@ -145,6 +145,148 @@ ul#vertical-menu-icons {
       background-color: rgba(79, 89, 114, 0.4);
       color: #aaf3b0; }
 
+.sidebar {
+  align-items: left;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 50px;
+  z-index: 100; }
+  .sidebar .hamburger {
+    background-color: #4b5b70;
+    color: #a2f2b4;
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+    line-height: 1.25;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    z-index: 1; }
+    .sidebar .hamburger:hover {
+      background-color: #4b5b70; }
+    .sidebar .hamburger i {
+      display: none; }
+  .sidebar > .sidebar-container {
+    background-color: rgba(245, 245, 245, 0.9);
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    position: fixed;
+    transform: translateX(-300px);
+    width: 350px;
+    z-index: 0;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms; }
+    .sidebar > .sidebar-container header {
+      background-color: #e5f3ea;
+      border-bottom: 1px solid #d0d0d0;
+      color: #154f7b;
+      display: flex;
+      flex-direction: row;
+      height: 50px;
+      padding-left: 65px;
+      padding-top: 10px;
+      position: fixed;
+      width: 100%;
+      z-index: 10; }
+    .sidebar > .sidebar-container #mbl-options {
+      display: none; }
+  .sidebar > .sidebar-container.expanded-sidebar {
+    transform: translateX(0px); }
+  .sidebar .menu-icons {
+    position: absolute;
+    top: 50px; }
+
+/* iPhone 5, 5S, 5C and 5SE */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .sidebar {
+    align-items: left;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 50px;
+    z-index: 100; }
+    .sidebar .hamburger {
+      background-color: #4b5b70;
+      color: #a2f2b4;
+      cursor: pointer;
+      font-size: 20px;
+      height: 50px;
+      line-height: 1.25;
+      padding: 10px 10px 10px 10px;
+      position: relative;
+      text-align: center;
+      width: 50px;
+      z-index: 1; }
+      .sidebar .hamburger:hover {
+        background-color: #4b5b70; }
+      .sidebar .hamburger i {
+        display: block; }
+    .sidebar > .sidebar-container {
+      background-color: rgba(245, 245, 245, 0.9);
+      box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      position: fixed;
+      transform: translateX(-300px);
+      width: 350px;
+      z-index: 0;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 400ms;
+      transition-duration: 400ms;
+      transform: translateX(-350px); }
+      .sidebar > .sidebar-container header {
+        background-color: #e5f3ea;
+        border-bottom: 1px solid #d0d0d0;
+        color: #154f7b;
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        padding-left: 65px;
+        padding-top: 10px;
+        position: fixed;
+        width: 100%;
+        z-index: 10; }
+      .sidebar > .sidebar-container #mbl-options {
+        display: block;
+        padding-top: 50px; }
+        .sidebar > .sidebar-container #mbl-options ul {
+          -webkit-margin-after: 0;
+          -webkit-margin-before: 0;
+          -webkit-margin-end: 0;
+          -webkit-margin-start: 0;
+          -webkit-padding-start: 0;
+          list-style: none;
+          margin-bottom: 0;
+          margin-top: 0;
+          padding: 0; }
+    .sidebar .menu-icons {
+      display: none; }
+  /* [end media] */ }
+
+#mbl-footer {
+  background-color: #d2fbd5;
+  border-top: 1px solid #d0d0d0;
+  bottom: 0;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.25);
+  height: 50px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10; }
+
 #canvas-billboard-lrg {
   background-color: transparent;
   position: relative;
@@ -197,6 +339,14 @@ ul#vertical-menu-icons {
 .init #canvas-billboard-lrg .container .title-area p {
   opacity: 1;
   transform: translateY(0px); }
+
+/* iPhone 5, 5S, 5C and 5SE */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #canvas-billboard-lrg .container .title-area {
+    left: 0;
+    padding: 0 15px;
+    width: 100%; } }
 
 #canvas-billboard-sml {
   background-color: transparent;
@@ -337,12 +487,12 @@ ul#vertical-menu-icons {
   width: 100%;
   z-index: 10; }
   .canvas-header > h4 {
-    left: 45px;
-    position: relative;
     -webkit-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: 400ms;
-    transition-duration: 400ms; }
+    transition-duration: 400ms;
+    left: 45px;
+    position: relative; }
   .canvas-header > h4.expanded {
     left: -500px; }
   .canvas-header .external-options {
@@ -350,8 +500,24 @@ ul#vertical-menu-icons {
     right: 0;
     top: 0; }
 
+/* iPhone 5, 5S, 5C and 5SE */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .canvas-header > h4 {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    display: block;
+    left: 0;
+    width: 100%;
+    text-align: center; }
+  .canvas-header .external-options {
+    display: none; } }
+
 #default-container {
   overflow: hidden;
+  padding-bottom: 50px;
   position: relative;
   -webkit-transition-property: all;
   transition-property: all;
@@ -383,61 +549,6 @@ a {
     z-index: -1;
     width: 90%;
     transform: translateX(5%); }
-
-.sidebar {
-  align-items: left;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 50px;
-  z-index: 100; }
-  .sidebar .hamburger {
-    background-color: #4b5b70;
-    color: #a2f2b4;
-    cursor: pointer;
-    height: 50px;
-    padding: 10px 10px 10px 10px;
-    position: relative;
-    text-align: center;
-    width: 50px;
-    z-index: 1;
-    font-size: 20px;
-    line-height: 1.25; }
-    .sidebar .hamburger:hover {
-      background-color: #4b5b70; }
-  .sidebar > .sidebar-container {
-    background-color: rgba(245, 245, 245, 0.9);
-    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    position: fixed;
-    transform: translateX(-300px);
-    width: 350px;
-    z-index: 0;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 400ms;
-    transition-duration: 400ms; }
-    .sidebar > .sidebar-container header {
-      background-color: #e5f3ea;
-      border-bottom: 1px solid #d0d0d0;
-      color: #154f7b;
-      display: flex;
-      flex-direction: row;
-      height: 50px;
-      padding-left: 65px;
-      padding-top: 10px;
-      position: fixed;
-      width: 100%;
-      z-index: 10; }
-    .sidebar > .sidebar-container .menu-icons {
-      position: absolute;
-      top: 50px; }
-  .sidebar > .sidebar-container.expanded-sidebar {
-    transform: translateX(0px); }
 
 #splash {
   height: 100%;
@@ -705,6 +816,14 @@ a {
     margin-bottom: 10px;
     background-position: center;
     background-size: 100%; }
+
+/* iPhone 5, 5S, 5C and 5SE */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .display-card {
+    background-color: #e9ecef;
+    margin-bottom: 40px;
+    padding: 10px; } }
 
 .breadcrumb {
   margin-bottom: 0;

@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
         id:3,
         titleOne: "User",
         titleTwo: "Centered Design",
-        excerpt: "To anticipate the end users expectations. To design with less ego and more on the users needs. What problem are we trying to solve? I have to ask the team the hard questions that may simply our efforts or.. . not. Sorry.",
+        excerpt: "To anticipate the end users expectations. To design with less ego and more focus on the users needs. What problem are we trying to solve? I have to ask the team the hard questions that may simplify our efforts or.. . not. Sorry.",
         img: './img/ux.png',
         type: 'UI/UX'
       },
