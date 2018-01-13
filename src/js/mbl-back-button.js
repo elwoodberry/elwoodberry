@@ -1,4 +1,4 @@
-/*
+// /*
 MOBILE BACK BUTTON
 */
 (function(){
@@ -17,9 +17,9 @@ MOBILE BACK BUTTON
     var DASH = '/dashboard';
 
 
-    console.log( URL );
-    console.log( PAST );
-    console.log( URL == PAST );
+    // console.log( URL );
+    // console.log( PAST );
+    // console.log( URL == PAST );
 
     if(URL == PAST){
       URL = DASH;

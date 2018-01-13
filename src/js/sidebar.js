@@ -9,10 +9,10 @@ SIDEBAR
   const TYPE_DESIGN = $('#type-designs').length;
   const TYPE_PROTOTYPE = $('#type-prototypes').length;
 
-  console.log('TYPE_DASHBOARD: ' + TYPE_DASHBOARD);
-  console.log('TYPE_LAYOUT: ' + TYPE_LAYOUT);
-  console.log('TYPE_DESIGN: ' + TYPE_DESIGN);
-  console.log('TYPE_PROTOTYPE: ' + TYPE_PROTOTYPE);
+  // console.log('TYPE_DASHBOARD: ' + TYPE_DASHBOARD);
+  // console.log('TYPE_LAYOUT: ' + TYPE_LAYOUT);
+  // console.log('TYPE_DESIGN: ' + TYPE_DESIGN);
+  // console.log('TYPE_PROTOTYPE: ' + TYPE_PROTOTYPE);
 
   // MENU ICONS
   const MENU_DASHBOARD = $('.menu-icon-dashboard').parent();
