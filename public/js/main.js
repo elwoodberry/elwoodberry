@@ -4,7 +4,10 @@ Full canvas widget display on the dashboard
 */
 (function(){
 
-console.log('Billboard Display Script - deprecated 01/09/2018');
+// console.log('Billboard Display Script - deprecated 01/09/2018');
+
+
+
 /*
   $(document).ready(function(){
     canvasBackground();
@@ -77,7 +80,7 @@ $(document).ready(function(){
 
 });
 
-/*
+// /*
 MOBILE BACK BUTTON
 */
 (function(){
@@ -96,9 +99,9 @@ MOBILE BACK BUTTON
     var DASH = '/dashboard';
 
 
-    console.log( URL );
-    console.log( PAST );
-    console.log( URL == PAST );
+    // console.log( URL );
+    // console.log( PAST );
+    // console.log( URL == PAST );
 
     if(URL == PAST){
       URL = DASH;
@@ -121,10 +124,10 @@ SIDEBAR
   const TYPE_DESIGN = $('#type-designs').length;
   const TYPE_PROTOTYPE = $('#type-prototypes').length;
 
-  console.log('TYPE_DASHBOARD: ' + TYPE_DASHBOARD);
-  console.log('TYPE_LAYOUT: ' + TYPE_LAYOUT);
-  console.log('TYPE_DESIGN: ' + TYPE_DESIGN);
-  console.log('TYPE_PROTOTYPE: ' + TYPE_PROTOTYPE);
+  // console.log('TYPE_DASHBOARD: ' + TYPE_DASHBOARD);
+  // console.log('TYPE_LAYOUT: ' + TYPE_LAYOUT);
+  // console.log('TYPE_DESIGN: ' + TYPE_DESIGN);
+  // console.log('TYPE_PROTOTYPE: ' + TYPE_PROTOTYPE);
 
   // MENU ICONS
   const MENU_DASHBOARD = $('.menu-icon-dashboard').parent();
