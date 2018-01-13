@@ -86,5 +86,21 @@
     display: none;
   }
 
+  .other-info {
+    display: flex;
+    flex-direction: column;
+
+    .other-images {
+      .container {
+        .col-md-4 {
+          margin-bottom: 40px;
+
+          a.other-imgs {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
 /* [end media] */
 }

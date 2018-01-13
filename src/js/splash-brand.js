@@ -10,8 +10,10 @@
     hamburgerIcon.addClass('ready');
     footer.addClass('ready');
 
-    billboardPosition();
 
+    if( $(window).width() > 768 ){
+      billboardPosition();
+    }
   });
 
   $(window).resize(function() {

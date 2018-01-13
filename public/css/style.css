@@ -850,8 +850,84 @@ a {
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  #splash #splash-container {
-    display: none; }
+  #splash {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%; }
+    #splash #splash-container {
+      background-color: transparent;
+      display: flex;
+      height: 300px;
+      position: absolute;
+      width: 580px;
+      z-index: 1;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 400ms;
+      transition-duration: 400ms;
+      background-color: transparent;
+      flex-direction: column;
+      height: 100%;
+      padding: 115px 20px 0 80px;
+      width: 100%; }
+      #splash #splash-container .billboard-container {
+        background-color: transparent;
+        flex: 1;
+        height: 250px;
+        max-width: 380px;
+        min-width: 320px;
+        position: relative;
+        background-color: transparent;
+        flex: 0;
+        max-width: 100%;
+        min-width: 100%;
+        order: 2; }
+        #splash #splash-container .billboard-container .billboard {
+          background-color: transparent;
+          height: 250px;
+          left: 0px;
+          max-width: 380px;
+          min-width: 320px;
+          position: absolute;
+          opacity: 0;
+          top: 0px;
+          transform: translateY(400px);
+          -webkit-transition-property: all;
+          transition-property: all;
+          -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+          max-width: 100%;
+          min-width: 100%; }
+          #splash #splash-container .billboard-container .billboard .title-container h2 {
+            font-size: 3rem; }
+          #splash #splash-container .billboard-container .billboard p {
+            font-size: 16px;
+            line-height: 1.4; }
+      #splash #splash-container ul.billboard-menu {
+        flex: .1;
+        display: flex;
+        order: 1; }
+        #splash #splash-container ul.billboard-menu li i {
+          font-size: 20px;
+          margin-right: 10px; }
+        #splash #splash-container ul.billboard-menu li span {
+          display: none; }
+        #splash #splash-container ul.billboard-menu li.active i {
+          color: #A3FF62; }
+    #splash .bckgrnd {
+      height: 100%;
+      top: 0; }
+    #splash footer {
+      flex-direction: column; }
+      #splash footer .copyright {
+        flex: 1;
+        order: 2; }
+      #splash footer .social {
+        flex: 1; }
+        #splash footer .social ul li {
+          flex: 1;
+          text-align: center; }
   /* [end media] */ }
 
 .grid-block h2 {
@@ -950,4 +1026,11 @@ a {
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #detail-header {
     display: none; }
+  .other-info {
+    display: flex;
+    flex-direction: column; }
+    .other-info .other-images .container .col-md-4 {
+      margin-bottom: 40px; }
+      .other-info .other-images .container .col-md-4 a.other-imgs {
+        height: 200px; }
   /* [end media] */ }

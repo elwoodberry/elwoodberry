@@ -1,39 +1,56 @@
-#splash {
+@mixin splash-main {
   height: 100%;
   overflow: hidden;
   position: absolute;
   width: 100%;
+}
+
+@mixin splash-container-default {
+  background-color: transparent;
+  display: flex;
+  height: 300px;
+  position: absolute;
+  width: 580px;
+  z-index: 1;
+  @include transition-default;
+  @include transition-duration-400;
+}
+
+@mixin billboard-container-default {
+  background-color: transparent;
+  flex: 1;
+  height: 250px;
+  max-width: 380px;
+  min-width: 320px;
+  position: relative;
+}
+
+@mixin billboard-default {
+  background-color: transparent;
+  height: 250px;
+  left: 0px;
+  max-width: 380px;
+  min-width: 320px;
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  transform: translateY(400px);
+  @include transition-default;
+  @include transition-duration-400;
+}
+
+// SPLASH
+#splash {
+  @include splash-main;
 
   #splash-container {
-    background-color: transparent;
-    display: flex;
-    height: 300px;
-    position: absolute;
-    width: 580px;
-    z-index: 1;
-    @include transition-default;
-    @include transition-duration-400;
+    @include splash-container-default;
 
     .billboard-container {
-      background-color: transparent;
-      flex: 1;
-      height: 250px;
-      max-width: 380px;
-      min-width: 320px;
-      position: relative;
+      @include billboard-container-default;
 
       .billboard {
-        background-color: transparent;
-        height: 250px;
-        left: 0px;
-        max-width: 380px;
-        min-width: 320px;
-        position: absolute;
-        opacity: 0;
-        top: 0px;
-        transform: translateY(400px);
-        @include transition-default;
-        @include transition-duration-400;
+        @include billboard-default;
 
         span {
           color: #A3FF62;
@@ -252,4 +269,101 @@
     }
 
   }
+}
+
+
+
+
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  #splash {
+    @include splash-main;
+
+    #splash-container {
+      @include splash-container-default;
+      background-color: transparent;
+      flex-direction: column;
+      height: 100%;
+      padding: 115px 20px 0 80px;
+      width: 100%;
+
+      .billboard-container {
+        @include billboard-container-default;
+        background-color: transparent;
+        flex: 0;
+        max-width: 100%;
+        min-width: 100%;
+        order: 2;
+
+        .billboard {
+          @include billboard-default;
+          max-width: 100%;
+          min-width: 100%;
+
+          .title-container {
+            h2 {
+              font-size: 3rem;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 1.4;
+          }
+        }
+      }
+
+      ul.billboard-menu {
+        flex: .1;
+        display: flex;
+        order: 1;
+
+        li {
+          i {
+            font-size: 20px;
+            margin-right: 10px;
+          }
+          span {
+            display: none;
+          }
+
+          &.active {
+            i {
+              color: #A3FF62;
+            }
+          }
+        }
+      }
+    }
+
+    .bckgrnd {
+      height: 100%;
+      top: 0;
+    }
+
+    footer {
+      flex-direction: column;
+
+      .copyright {
+        flex: 1;
+        order: 2;
+      }
+      .social {
+        flex: 1;
+
+        ul {
+          li {
+            flex: 1;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+/* [end media] */
 }

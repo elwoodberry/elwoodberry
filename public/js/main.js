@@ -81,11 +81,33 @@ $(document).ready(function(){
 MOBILE BACK BUTTON
 */
 (function(){
-  const ANCHOR = $('#left-nav');
-  const ANCHOR_HREF = ANCHOR.attr('href');
-  const URL = ANCHOR_HREF.replace(':', '');
 
-  ANCHOR.attr('href', URL);
+  const projectDetail = $('#project-detail').length;
+
+  if(projectDetail > 0){
+    backButton();
+  }
+
+  function backButton(){
+    var ANCHOR = $('#left-nav');
+    var ANCHOR_HREF = ANCHOR.attr('href');
+    var URL = ANCHOR_HREF.replace(':', '');
+    var PAST = '/portfolio/past';
+    var DASH = '/dashboard';
+
+
+    console.log( URL );
+    console.log( PAST );
+    console.log( URL == PAST );
+
+    if(URL == PAST){
+      URL = DASH;
+    }
+
+    ANCHOR.attr('href', URL);
+  }
+
+
 })();
 
 /*
@@ -93,16 +115,16 @@ SIDEBAR
 */
 (function(){
 
-  const HAMBURGER_ICON = $('#sidebar-hamburger');
-  const SIDEBAR_AREA = $('.sidebar-container');
-  const DEFAULT_AREA = $('#default-container');
-  const CANVAS_HEADER = $('.canvas-header h4');
-
   // ACTIVE INDICATORS
   const TYPE_DASHBOARD = $('#type-past').length;
-  const TYPE_LAYOUT = $('#type-layout').length;
-  const TYPE_DESIGN = $('#type-design').length;
-  const TYPE_PROTOTYPE = $('#type-prototype').length;
+  const TYPE_LAYOUT = $('#type-layouts').length;
+  const TYPE_DESIGN = $('#type-designs').length;
+  const TYPE_PROTOTYPE = $('#type-prototypes').length;
+
+  console.log('TYPE_DASHBOARD: ' + TYPE_DASHBOARD);
+  console.log('TYPE_LAYOUT: ' + TYPE_LAYOUT);
+  console.log('TYPE_DESIGN: ' + TYPE_DESIGN);
+  console.log('TYPE_PROTOTYPE: ' + TYPE_PROTOTYPE);
 
   // MENU ICONS
   const MENU_DASHBOARD = $('.menu-icon-dashboard').parent();
@@ -111,7 +133,7 @@ SIDEBAR
   const MENU_LAYOUT = $('.menu-icon-layout').parent();
 
   // MENU ICONS ANCHOR
-  const MENU_ICONS_A = $('#vertical-menu-icons li a');
+  const MENU_ICONS_A = $('#vertical-menu-icons li a, #horizontal-menu-icons li a');
 
   $(document).ready(function(){
     if(TYPE_DASHBOARD > 0){
@@ -133,13 +155,19 @@ SIDEBAR
   });
 
 
+  // Deprecated 01/13/2018
+  /*
+  const HAMBURGER_ICON = $('#sidebar-hamburger');
+  const SIDEBAR_AREA = $('.sidebar-container');
+  const DEFAULT_AREA = $('#default-container');
+  const CANVAS_HEADER = $('.canvas-header h4');
 
   HAMBURGER_ICON.on('click', function(){
     SIDEBAR_AREA.toggleClass('expanded-sidebar');
     DEFAULT_AREA.toggleClass('collapse-area');
     CANVAS_HEADER.toggleClass('expanded');
   });
-
+  */
 
 
 })();
@@ -156,8 +184,10 @@ SIDEBAR
     hamburgerIcon.addClass('ready');
     footer.addClass('ready');
 
-    billboardPosition();
 
+    if( $(window).width() > 768 ){
+      billboardPosition();
+    }
   });
 
   $(window).resize(function() {
