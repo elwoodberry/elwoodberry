@@ -3,11 +3,12 @@ extends ../layouts/app-default.pug
 block content
 
   include ../partials/canvas-header.pug
+  include ../partials/mbl-detail-header.pug
 
   .container
 
     //- BREADCRUMBS
-    nav(aria-label="breadcrumb")
+    nav(id='nav-breadcrumbs' aria-label="breadcrumb")
       ol(class="breadcrumb")
         li(class="breadcrumb-item")
           a(href="/dashboard") Dashboard
@@ -17,7 +18,7 @@ block content
 
         li(class="breadcrumb-item active" aria-current="page") #{name}
 
-    h2 #{name}
+    h2(id='detail-header') #{name}
 
     .portfolio-item-display(style='background-image:url('+ img +')')
       .thumbnail-container

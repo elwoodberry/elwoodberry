@@ -85,9 +85,11 @@
 
   .sidebar {
     @include sidebar-default;
+    display: none;
 
     .hamburger {
       @include hamburger-default;
+      display: none;
 
       i {
         display: block;
@@ -98,6 +100,7 @@
     > .sidebar-container {
         @include sidebar-container-default;
         transform: translateX(-350px);
+        display: none;
 
         header {
           @include header-default;

@@ -39,6 +39,7 @@
   font-size: 24px;
   padding-bottom: 5px;
 }
+
 @mixin ul-menu-icon-anchor-span {
   background-color: transparent;
   flex: 1;
@@ -101,7 +102,13 @@ ul#horizontal-menu-icons {
         }
       }
     }
+    &.active {
+      background-color: rgba(88, 88, 88, 0.5);
 
+      a {
+        color: #ffffff;
+      }
+    }
   }
 }
 
@@ -136,6 +143,14 @@ ul#vertical-menu-icons {
         .menu-icon {
           @include ul-menu-icon-li-icon-hover;
         }
+      }
+    }
+
+    &.active {
+      background-color: rgba(88, 88, 88, 0.5);
+
+      a {
+        color: #ffffff;
       }
     }
 

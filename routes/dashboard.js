@@ -13,6 +13,7 @@ router.get('/dashboard', function(req, res, next) {
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
+    type: 'past',
     projects: pastProjects
   });
 

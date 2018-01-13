@@ -1,3 +1,8 @@
+
+#mbl-detail-header {
+  display: none;
+}
+
 .canvas-header {
   @include header-default;
 
@@ -16,13 +21,15 @@
     right: 0;
     top: 0;
   }
+  .mbl-back-btn {
+    display: none;
+  }
 }
 
 /* iPhone 5, 5S, 5C and 5SE */
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-
 
   .canvas-header {
 
@@ -38,7 +45,42 @@
     .external-options {
       display: none;
     }
+
+    .mbl-back-btn {
+      display: block;
+      left: 65px;
+      position: absolute;
+      width: 100%;
+
+      a {
+
+      }
+    }
   }
 
+  #mbl-detail-header {
+    display: flex;
+    padding-left: 0;
+    padding-top: 0;
+    text-align: center;
+
+    #left-nav,
+    #right-nav {
+      flex: 1;
+      padding-top: 12px;
+    }
+
+    #left-nav {
+      i {
+        padding-right: 10px;
+      }
+    }
+    
+    #project-title {
+      flex: 3;
+      margin: 0;
+      padding-top: 12px;
+    }
+  }
 
 }

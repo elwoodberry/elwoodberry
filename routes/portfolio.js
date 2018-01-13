@@ -16,6 +16,7 @@ router.get('/layouts', function(req, res, next) {
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
+    type: 'layouts',
     projects: layoutProjects
   });
 });
@@ -28,6 +29,7 @@ router.get('/designs', function(req, res, next) {
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
+    type: 'designs',
     projects: designProjects
   });
 });
@@ -40,13 +42,15 @@ router.get('/prototypes', function(req, res, next) {
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
+    type: 'prototypes',
     projects: prototypeProjects
   });
 });
 
 // PORTFOLIO DETAIL ROUTE VIEW
-router.get('/:id', function(req, res){
+router.get('/:id/:type', function(req, res){
 
+  var REQ_TYPE = req.params.type;
   var REQ_ID = req.params.id;
   var ID = REQ_ID.slice(1, 7);
   var proj = {};
@@ -61,7 +65,8 @@ router.get('/:id', function(req, res){
         img: portfolio.projects[i].img,
         imgurl: portfolio.projects[i].imgurl,
         technologies: portfolio.projects[i].technologies,
-        otherimgs: portfolio.projects[i].otherimgs
+        otherimgs: portfolio.projects[i].otherimgs,
+        type: REQ_TYPE
       }
     }
   }
