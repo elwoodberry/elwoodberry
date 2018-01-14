@@ -905,7 +905,7 @@ a {
             font-size: 16px;
             line-height: 1.4; }
       #splash #splash-container ul.billboard-menu {
-        flex: .1;
+        flex: .13;
         display: flex;
         order: 1; }
         #splash #splash-container ul.billboard-menu li i {
@@ -919,6 +919,7 @@ a {
       height: 100%;
       top: 0; }
     #splash footer {
+      display: none;
       flex-direction: column; }
       #splash footer .copyright {
         flex: 1;

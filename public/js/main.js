@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 });
 
-// /*
+/*
 MOBILE BACK BUTTON
 */
 (function(){

@@ -318,7 +318,7 @@
       }
 
       ul.billboard-menu {
-        flex: .1;
+        flex: .13;
         display: flex;
         order: 1;
 
@@ -346,6 +346,7 @@
     }
 
     footer {
+      display: none;
       flex-direction: column;
 
       .copyright {
