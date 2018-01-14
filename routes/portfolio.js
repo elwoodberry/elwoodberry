@@ -11,12 +11,12 @@ var prototypeProjects = portfolio.setProject('prototype');
 // LAYOUTS
 router.get('/layouts', function(req, res, next) {
   res.render('portfolio/grid', {
-    title: "Layouts",
-    description: "Application Layouts by Elwood Berry -||- Portfolio Application",
-    robots: "follow",
-    canonical: "http://domain.com",
-    twitterImage: "http://domain.com",
-    prjcttype: 'layouts',
+    // title: "Layouts",
+    // description: "Application Layouts by Elwood Berry -||- Portfolio Application",
+    // robots: "follow",
+    // canonical: "http://domain.com",
+    // twitterImage: "http://domain.com",
+    // prjcttype: 'layouts',
     projects: layoutProjects
   });
 });
@@ -24,12 +24,12 @@ router.get('/layouts', function(req, res, next) {
 // DESIGN
 router.get('/designs', function(req, res, next) {
   res.render('portfolio/grid', {
-    title: "Graphic Design",
-    description: "Graphic Design by Elwood Berry -||- Portfolio Application",
-    robots: "follow",
-    canonical: "http://domain.com",
-    twitterImage: "http://domain.com",
-    prjcttype: 'designs',
+    // title: "Graphic Design",
+    // description: "Graphic Design by Elwood Berry -||- Portfolio Application",
+    // robots: "follow",
+    // canonical: "http://domain.com",
+    // twitterImage: "http://domain.com",
+    // prjcttype: 'designs',
     projects: designProjects
   });
 });
@@ -37,12 +37,12 @@ router.get('/designs', function(req, res, next) {
 // PROTOTYPES
 router.get('/prototypes', function(req, res, next) {
   res.render('portfolio/grid', {
-    title: "Prototypes",
-    description: "Application Prototypes by Elwood Berry -||- Portfolio Application",
-    robots: "follow",
-    canonical: "http://domain.com",
-    twitterImage: "http://domain.com",
-    prjcttype: 'prototypes',
+    // title: "Prototypes",
+    // description: "Application Prototypes by Elwood Berry -||- Portfolio Application",
+    // robots: "follow",
+    // canonical: "http://domain.com",
+    // twitterImage: "http://domain.com",
+    // prjcttype: 'prototypes',
     projects: prototypeProjects
   });
 });
