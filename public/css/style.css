@@ -214,7 +214,7 @@ ul#vertical-menu-icons {
 
 /* iPhone 5, 5S, 5C and 5SE */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .sidebar {
     align-items: left;
     background-color: transparent;
@@ -301,7 +301,7 @@ ul#vertical-menu-icons {
 
 /* iPhone 5, 5S, 5C and 5SE */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #mbl-footer {
     background-color: #d2fbd5;
     border-top: 1px solid #d0d0d0;
@@ -369,7 +369,7 @@ ul#vertical-menu-icons {
 
 /* iPhone 5, 5S, 5C and 5SE */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #canvas-billboard-lrg .container .title-area {
     left: 0;
     padding: 0 15px;
@@ -534,7 +534,7 @@ ul#vertical-menu-icons {
 
 /* iPhone 5, 5S, 5C and 5SE */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .canvas-header > h4 {
     -webkit-transition-property: all;
     transition-property: all;
@@ -584,7 +584,7 @@ a {
 #nav-breadcrumbs {
   display: block; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #nav-breadcrumbs {
     display: none; }
   /* [end media] */ }
@@ -849,7 +849,7 @@ a {
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #splash {
     height: 100%;
     overflow: hidden;
@@ -960,7 +960,7 @@ a {
 
 /* iPhone 5, 5S, 5C and 5SE */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .display-card {
     background-color: #e9ecef;
     margin-bottom: 40px;
@@ -1024,7 +1024,7 @@ a {
           background-position: center;
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4); }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 320px) and (max-width: 568px) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #detail-header {
     display: none; }
   .other-info {
