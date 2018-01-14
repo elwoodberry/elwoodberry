@@ -8,11 +8,11 @@ var pastProjects = portfolio.setProject('past');
 router.get('/dashboard', function(req, res, next) {
 
   res.render('dashboard', {
-    prjcttype: "kanye",
-    title: "elwoodberry",
-    description: "Elwood Berry Portfolio Application",
-    robots: "follow",
-    canonical: "http://domain.com",
+    // prjcttype: "kanye",
+    // title: "elwoodberry",
+    // description: "Elwood Berry Portfolio Application",
+    // robots: "follow",
+    // canonical: "http://domain.com",
     // twitterImage: "http://domain.com",
     projects: pastProjects
   });
