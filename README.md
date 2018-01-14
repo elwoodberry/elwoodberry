@@ -21,3 +21,18 @@ Run the application(in the background)
 ```
 sudo nohup nodejs app.js &
 ```
+
+
+
+
+## Project Type
+
+The source of 'type'
+['/routes/portfolio/*'](/routes/portfolio/)
+```
+router.get('/route', function(req, res, next) {
+  res.render('viewfile', {
+    type: 'type'
+  });
+});
+```

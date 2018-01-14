@@ -2,7 +2,9 @@ extends ./layouts/app-default.pug
 
 block content
 
-  div(id='type-' + type)
+  - projectType = projtype
+
+  div(id='type-' + projectType)
 
   include ./partials/canvas-header.pug
 
@@ -11,7 +13,7 @@ block content
   .container(style='padding-top:0;')
 
     .grid-block
-      h2 #{type} Projects
+      h2 #{projectType} Projects
       .row
         each project in projects
           .col-lg-3
@@ -20,4 +22,4 @@ block content
               h4 #{project.name}
               p #{project.excerpt}
 
-              a(href='/portfolio/:' + project.id + '/:' + type ) Learn More
+              a(href='/portfolio/:' + project.id + '/:' + projectType ) Learn More
