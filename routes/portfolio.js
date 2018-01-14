@@ -48,7 +48,7 @@ router.get('/prototypes', function(req, res, next) {
 });
 
 // PORTFOLIO DETAIL ROUTE VIEW
-router.get('/:id/:type', function(req, res){
+router.get('/:id/:prjcttype', function(req, res){
 
   var REQ_TYPE = req.params.type;
   var REQ_ID = req.params.id;
