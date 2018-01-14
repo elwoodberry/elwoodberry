@@ -16,7 +16,7 @@ router.get('/layouts', function(req, res, next) {
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
-    type: 'layouts',
+    prjcttype: 'layouts',
     projects: layoutProjects
   });
 });
@@ -29,7 +29,7 @@ router.get('/designs', function(req, res, next) {
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
-    type: 'designs',
+    prjcttype: 'designs',
     projects: designProjects
   });
 });
@@ -42,7 +42,7 @@ router.get('/prototypes', function(req, res, next) {
     robots: "follow",
     canonical: "http://domain.com",
     twitterImage: "http://domain.com",
-    type: 'prototypes',
+    prjcttype: 'prototypes',
     projects: prototypeProjects
   });
 });

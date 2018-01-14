@@ -2,9 +2,7 @@ extends ../layouts/app-default.pug
 
 block content
 
-  - projectType = #{projtype}
-
-  div(id='type-' + projectType)
+  div(id='type-' + prjcttype)
 
   include ../partials/canvas-header.pug
 
@@ -27,4 +25,4 @@ block content
               h4 #{project.name}
               p #{project.excerpt}
 
-              a(href='/portfolio/:' + project.id + '/:' + projectType ) Learn More
+              a(href='/portfolio/:' + project.id + '/:' + prjcttype ) Learn More
