@@ -29,5 +29,5 @@ $ sudo rm -rf elwoodberry tmp
 ```
 [Kill all Nodejs processes](https://medium.com/gatemill/how-to-terminate-a-nodejs-process-aa64aba56eb3)
 ```
-$ sudo pkill -f node
+$ sudo pkill -f nodejs
 ```
