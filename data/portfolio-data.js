@@ -296,7 +296,7 @@ var projects = [
     imgurl: 'https://drive.google.com/file/d/1JuFpgdfW9OJWl84LnOQvuHHZBnF_mGMO/view?usp=sharing',
     technologies: ['PUG', 'SAAS', 'GULP', 'HTML5', 'NodeJS'],
     otherimgs: [],
-    tags: ['prototype'],
+    tags: ['past','prototype'],
     display_canvas: true,
     display_iframe: '/displays/010_css-transition-alpha.html'
   }
