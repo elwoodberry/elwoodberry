@@ -286,6 +286,19 @@ var projects = [
       }
     ],
     tags: ['past', 'design']
+  },
+  {
+    id: '000010',
+    name: 'CSS Transition Alpha',
+    excerpt: 'Theme development. Mobile navigation menu. Incorporate CSS transitions to add more emphasis to different states(hover, click, on load, etc).',
+    description: '',
+    img: '/img/portfolio/010_css-transitons-alpha/001_css-transitons-alpha.png',
+    imgurl: 'https://drive.google.com/file/d/1JuFpgdfW9OJWl84LnOQvuHHZBnF_mGMO/view?usp=sharing',
+    technologies: ['PUG', 'SAAS', 'GULP', 'HTML5', 'NodeJS'],
+    otherimgs: [],
+    tags: ['prototype'],
+    display_canvas: true,
+    display_iframe: '/displays/010_css-transition-alpha.html'
   }
 ];
 

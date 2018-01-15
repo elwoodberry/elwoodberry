@@ -22,21 +22,28 @@ block content
 
     h2(id='detail-header') #{name}
 
+    // PROJECT DEFAULT IMAGE BILLBOARD
     .portfolio-item-display(style='background-image:url('+ img +')')
-      .thumbnail-container
 
-        a(target='_blank' href='' + imgurl)
-          img(src='' + img)
+      .thumbnail-container
+        a(target='_blank' href='' + imgurl style='background-image:url('+ img +')')
 
         span
           i(class="fa fa-angle-left" aria-hidden="true")
           small Click To See Larger Image.
 
 
-
+    // PROJECT DESCRIPTION
     h3(class="portfolio-item-description") Project Description
     p #{excerpt}
     p #{description}
+
+    hr
+
+    // DISPLAY CANVAS
+    if(display_canvas)
+      #display-canvas
+        iframe(src='' + display_iframe)
 
     hr
 

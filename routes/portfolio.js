@@ -66,7 +66,9 @@ router.get('/:id/:type', function(req, res){
         imgurl: portfolio.projects[i].imgurl,
         technologies: portfolio.projects[i].technologies,
         otherimgs: portfolio.projects[i].otherimgs,
-        type: REQ_TYPE
+        type: REQ_TYPE,
+        display_canvas: portfolio.projects[i].display_canvas,
+        display_iframe: portfolio.projects[i].display_iframe
       }
     }
   }

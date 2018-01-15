@@ -21,7 +21,7 @@ $ sudo npm install
 ```
 Run the application(in the background)
 ```
-$ sudo nohup nodejs app.js &
+$ sudo nodejs app.js &
 ```
 Remove Git Project
 ```

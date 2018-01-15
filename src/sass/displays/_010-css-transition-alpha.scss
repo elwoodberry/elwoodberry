@@ -1,0 +1,95 @@
+
+$border-color: #d4d4d4;
+$background-color: #f5f5f5;
+$background-color-dark: #dadada;
+$dark-blue: #525774;
+
+@mixin translateY($pixels) {
+  -webkit-transform: translateY($pixels);
+  -o-transform: translateY($pixels);
+  transform: translateY($pixels);
+}
+
+#css-transition-alpha {
+  font-family: 'Anonymous Pro', monospace;
+
+  ul {
+    @include ul-default;
+    @include transition-default;
+    @include transition-duration-600;
+    align-items: center;
+    background-color: $background-color;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    overflow: hidden;
+
+    // List Item
+    li {
+      flex: 1;
+      border-right: 1px solid $border-color;
+      text-align: center;
+
+      // Anchor
+      a {
+        @include translateY(0px);
+        border-top: 1px solid transparent;
+        color: $dark-blue;
+        display: flex;
+        height: 50px;
+        flex-direction: column;
+        text-decoration: none;
+
+        // Span
+        span {
+          font-size: 12px;
+
+          // Directional Icons
+          i {
+            font-size: 10px;
+          }
+        }
+
+        // Main Icon
+        i {
+          font-size: 24px;
+          padding: 4px;
+        }
+
+        // a :hover
+        &:hover {
+          border-top: 1px solid #ffa100;
+
+          // Main Icon :hover
+          i {
+            color: #ffa100;
+          }
+        }
+
+        // a :active
+        &:active {
+          background-color: $background-color-dark;
+          border-top: 1px solid $dark-blue;
+
+          // Main Icon :hover
+          i {
+            color: $dark-blue;
+          }
+        }
+      }
+
+      // List Item :Last Child
+      &:last-child {
+        border-right: none;
+      }
+
+    }
+
+    // Unordered List : Ready
+    &.ready {
+      opacity: 1;
+    }
+  }
+}
