@@ -57,6 +57,6 @@ app.use(function(err, req, res, next) {
 
 // PORT
 // Listen On Port 3000
-app.listen(3000, function(){
+app.listen(80, function(){
   console.log('READY!');
 });

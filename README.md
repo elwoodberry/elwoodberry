@@ -5,7 +5,7 @@
 ## Installation
 Get Updates
 ```
-$ sudo apt-get updates
+$ sudo apt-get update
 ```
 Clone Github
 ```
