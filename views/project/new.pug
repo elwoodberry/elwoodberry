@@ -1,0 +1,139 @@
+extends ../layouts/default.pug
+
+block content
+
+
+
+
+  .container(id='project-form')
+
+    h2 New Project
+    span(class="required-asterisk") *
+    small(class="form-text text-muted" style="display: inline;") Indicates A Required Field.
+
+    //- FLASH MESSAGES
+    div(class="alert alert-danger") Something Went Wrong.
+    div(class="alert alert-success") Project has been saved.
+
+    form(id='new-project' novalidate)
+
+      //- GENERAL/CATEGORY
+      .row
+        .col-sm-8
+
+          h3 General Information
+
+          //- PROJECT NAME
+          div(class="form-group")
+            label(for="project-name")
+              span Name
+              span(class="required-asterisk") *
+            input(id="project-name" type="text" class="form-control" maxlength="50" aria-describedby="projectName" required)
+            small(id="projectName" class="form-text text-muted") 50 Maximum Characters
+            div(class="invalid-feedback") Every project must have a name.
+
+          //- PROJECT EXCERPT
+          div(class="form-group")
+            label(for="project-excerpt")
+              span Excerpt
+              span(class="required-asterisk") *
+            textarea(id="project-excerpt" class="form-control" maxlength="160" aria-describedby="projectExcerpt" rows="3" required)
+            small(id="projectExcerpt" class="form-text text-muted") 160 Maximum Characters
+            div(class="invalid-feedback") Every project must have an excerpt.
+
+          //- PROJECT DESCRIPTION
+          div(class="form-group")
+            label(for="project-description") Description
+            textarea(id="project-description" class="form-control" maxlength="300" aria-describedby="projectDescription" rows="5")
+            small(id="projectDescription" class="form-text text-muted") 300 Maximum Characters
+
+          //- TECHNOLOGIES
+          h3 Technologies
+          .row
+
+            each technology in technologies
+              .col-sm-4
+                div(class="form-check")
+                  input(name="technology" class="form-check-input" type="checkbox" value=''+technology.name id=''+technology.name)
+                  label(class="form-check-label" for=''+technology.name) #{technology.name}
+
+
+        .col-sm-4
+          h3 Project Image
+          div(class="form-group")
+
+            div(id="preview-img")
+              div(id="bckgrnd-default-img")
+
+            // label(for="project-main-img") Main Project Image
+            // input(type="file" class="form-control-file" id="project-main-img" required)
+            // div(class="invalid-feedback") Every project must have a default image.
+
+            // div(class="custom-file")
+            //   input(type="file" class="custom-file-input" id="customFile" required)
+            //   label(class="custom-file-label" for="customFile") Choose file
+            //   div(class="invalid-feedback") Every project must have a default image.
+
+            div(class="custom-file")
+               input(type="file" class="custom-file-input" id="validatedCustomFile" required)
+               label(class="custom-file-label" for="validatedCustomFile") Choose file
+               div(class="invalid-feedback") Every project must have a default image.
+
+            h3 Category
+            div(class="card")
+              div(class="card-body")
+
+                div(class="form-check")
+                  input(name="category" class="form-check-input" type="checkbox" value="prototype" id="prototype")
+                  label(class="form-check-label" for="prototype") Prototype
+
+                div(class="form-check")
+                  input(name="category" class="form-check-input" type="checkbox" value="uiux" id="uiux")
+                  label(class="form-check-label" for="prototype") UI/UX
+
+                div(class="form-check")
+                  input(name="category" class="form-check-input" type="checkbox" value="design" id="design")
+                  label(class="form-check-label" for="prototype") Design
+
+            h3 Tags
+            div(class="card")
+              div(class="card-body")
+
+                div(class="form-check")
+                  input(name="tag" class="form-check-input" type="checkbox" value="" id="prototype")
+                  label(class="form-check-label" for="prototype") Prototype
+
+                div(class="form-check")
+                  input(name="tag" class="form-check-input" type="checkbox" value="" id="prototype")
+                  label(class="form-check-label" for="prototype") UI/UX
+
+                div(class="form-check")
+                  input(name="tag" class="form-check-input" type="checkbox" value="" id="prototype")
+                  label(class="form-check-label" for="prototype") Design
+
+
+
+
+      //- IMAGES
+      h3 Additional Images
+      .row
+        .col-sm-6
+          div(class="form-group")
+            label(for="project-main-img") Main Project Image
+            input(type="file" class="form-control-file" id="project-main-img")
+        .col-sm-6
+          div(class="form-group")
+            label(for="project-main-img") Main Project Image
+            input(type="file" class="form-control-file" id="project-main-img")
+        .col-sm-6
+          div(class="form-group")
+            label(for="project-main-img") Main Project Image
+            input(type="file" class="form-control-file" id="project-main-img")
+        .col-sm-6
+          div(class="form-group")
+            label(for="project-main-img") Main Project Image
+            input(type="file" class="form-control-file" id="project-main-img")
+
+      hr
+
+      button(type="submit" class="btn btn-primary") Add New Project

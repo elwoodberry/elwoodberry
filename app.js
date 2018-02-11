@@ -12,6 +12,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var dashboard = require('./routes/dashboard');
 var portfolio = require('./routes/portfolio');
+var project = require('./routes/project');
 
 // EXPRESS
 var app = express();
@@ -35,6 +36,7 @@ app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
 app.use('/', index);
 app.use('/', dashboard);
 app.use('/portfolio', portfolio);
+app.use('/project', project);
 
 // ERRORS
 // 404
@@ -57,6 +59,6 @@ app.use(function(err, req, res, next) {
 
 // PORT
 // Listen On Port 3000
-app.listen(80, function(){
+app.listen(3000, function(){
   console.log('READY!');
 });

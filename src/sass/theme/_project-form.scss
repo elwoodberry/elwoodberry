@@ -1,0 +1,116 @@
+
+
+// PROJECT FORM
+
+
+//
+#project-form {
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  #preview-img {
+    border: 1px solid #000;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    height: 200px;
+    margin-top: 20px;
+    position: relative;
+
+    #bckgrnd-default-img {
+      background-image: url('../img/portfolio/default-project-img.png');
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .card {
+    background-color: #f8f9fa;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .card-body {
+      padding: 8px;
+    }
+  }
+
+  .row {
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+
+  .form-check-input {
+    margin-left: 0;
+  }
+
+  h3 {
+    margin-top: 25px;
+  }
+
+  .required-asterisk {
+    color: #FF0000;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  // CUSTOM FILE UPLOAD
+  // http://getbootstrap.com/docs/4.0/components/forms/#file-browser
+  // We hide the default file <input> via opacity and instead style the <label>. The button is generated and positioned with ::after. Lastly, we declare a width and height on the <input> for proper spacing for surrounding content.
+  
+  .custom-file {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    margin-bottom: 0;
+
+    .custom-file-input {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: calc(2.25rem + 2px);
+      margin: 0;
+      opacity: 0;
+    }
+    .custom-file-label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      height: calc(2.25rem + 2px);
+      padding: .375rem .75rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        display: block;
+        height: calc(calc(2.25rem + 2px) - 1px * 2);
+        padding: .375rem .75rem;
+        line-height: 1.5;
+        color: #495057;
+        content: "Browse";
+        background-color: #e9ecef;
+        border-left: 1px solid #ced4da;
+        border-radius: 0 .25rem .25rem 0;
+      }
+    }
+  }
+
+  // END #project-form
+}
